@@ -1,0 +1,20 @@
+{
+  "name": "happi-helpers",
+  "version": "0.0.1",
+  "description": "Common code.",
+  "exports": {
+    "./wait": "./src/wait.mjs",
+    "./userError": "./src/userError.mjs",
+    "./socket": "./src/socket.mjs",
+    "./timeCache": "./src/timeCache.mjs",
+    "./config/env": "./src/config/env.mjs",
+    "./config/file": "./src/config/file.mjs",
+    "./express/disableCache": "./src/express/disableCache.mjs"
+  },
+  "dependencies": {
+    "debug": "^4.4.0",
+    "lodash": "^4.17.21"
+  },
+  "author": "Happinov",
+  "license": "UNLICENSED"
+}
