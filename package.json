@@ -12,7 +12,8 @@
     "./express/disableCache": "./src/express/disableCache.mjs",
     "./jquery": "./src/jquery.mjs",
     "./marionette": "./src/marionette.mjs",
-    "./randomUUID": "./src/randomUUID.mjs"
+    "./randomUUID": "./src/randomUUID.mjs",
+    "./querystring": "./src/querystring.mjs"
   },
   "dependencies": {
     "debug": "^4.4.0",
