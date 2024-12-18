@@ -1,23 +1,15 @@
 
-import _ from 'lodash'
+class UserError extends Error {
+	static isUserError(err) {
+		return err instanceof UserError
+	}
 
-export default {
-	create(message,details,cause) {
-		const error = new Error(message)
-		error.isUserError = true
-		if (details) error.details = details
-		if (cause) error.cause = cause
-		return error
-	},
+	constructor(message,details,cause) {
+		super(message)
 
-	createStatus(statusCode,message) {
-		const error = new Error(message)
-		error.isUserError = true
-		error.statusCode = statusCode
-		return error
-	},
-
-	isUserError(err) {
-		return _.isError(err) && err.isUserError
-	},
+		this.details = details
+		this.cause = cause
+	}
 }
+
+export default UserError
