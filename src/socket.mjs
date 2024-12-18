@@ -52,6 +52,11 @@ export default {
 				})
 			}
 
+			socket.registerMultipleServices = function(mapping) {
+				for (const name in mapping)
+					socket.registerService(name,mapping[name])
+			}
+
 			next?.()
 		}
 	},
