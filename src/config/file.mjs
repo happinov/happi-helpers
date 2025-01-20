@@ -45,12 +45,12 @@ function assignDefault(target,key,value) {
 	let currentTarget = target
 
 	while (tokens.length > 1)
-		currentTarget = currentTarget[tokens.shift()] ||= {}
+		currentTarget = currentTarget[tokens.shift()] ??= {}
 
 	if (_.isFunction(value))
 		value = value()
 
-	currentTarget[tokens[0]] = value
+	currentTarget[tokens[0]] ??= value
 }
 
 export default {
