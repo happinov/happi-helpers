@@ -30,12 +30,20 @@ export default (Marionette)=> {
 		return id
 	}
 
+	function waitAutorelease(duration) {
+		return new Promise((resolve)=> {
+			this.setTimeout(resolve, duration ?? 0)
+		})
+	}
+
 	Marionette.View.prototype.ensureRendered = ensureRendered
 	Marionette.View.prototype.ensureAttached = ensureAttached
 	Marionette.View.prototype.setInterval = setIntervalAutorelease
 	Marionette.View.prototype.setTimeout = setTimeoutAutorelease
+	Marionette.View.prototype.wait = waitAutorelease
 	Marionette.CollectionView.prototype.ensureRendered = ensureRendered
 	Marionette.CollectionView.prototype.ensureAttached = ensureAttached
 	Marionette.CollectionView.prototype.setInterval = setIntervalAutorelease
 	Marionette.CollectionView.prototype.setTimeout = setTimeoutAutorelease
+	Marionette.CollectionView.prototype.wait = waitAutorelease
 }
