@@ -13,8 +13,8 @@ const PARSE_FUNCTIONS = {
 }
 
 function parseValue(key,value) {
-	if (PARSE_FUNCTION[key])
-		return PARSE_FUNCTION[key](value)
+	if (PARSE_FUNCTIONS[key])
+		return PARSE_FUNCTIONS[key](value)
 	return value
 }
 
