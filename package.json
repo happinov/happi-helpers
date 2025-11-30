@@ -1,6 +1,6 @@
 {
   "name": "happi-helpers",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Common code.",
   "exports": {
     "./wait": "./src/wait.mjs",
