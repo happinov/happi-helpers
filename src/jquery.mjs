@@ -31,10 +31,7 @@ export default ($)=> {
 	}
 
 	$.fn.setDisabled = function(value) {
-		this.each(function() {
-			this.disabled = value ?? true
-			this.disabled == true // read value to force commit and work around state update bug.
-		})
+		this.prop('disabled', !!value)
 	}
 
 	$.fn.replaceClass = function(removed,added) {
